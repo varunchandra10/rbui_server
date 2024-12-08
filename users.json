@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Varun chandra",
+    "email": "varun@example.com",
+    "role": "Admin",
+    "status": "Active"
+  },
+  {
+    "id": 2,
+    "name": "Vijay",
+    "email": "vijay@example.com",
+    "role": "Editor",
+    "status": "Inactive"
+  },
+  {
+    "id": 3,
+    "name": "Amulya",
+    "email": "amulya@gmail.com",
+    "role": "Editor",
+    "status": "Active"
+  },
+  {
+    "id": 4,
+    "name": "Jishnu",
+    "email": "jishnu2@gmail.com",
+    "role": "Editor",
+    "status": "Active"
+  }
+]
