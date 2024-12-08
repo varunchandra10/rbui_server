@@ -2,11 +2,6 @@ import express from "express";
 import fs from "fs";
 import path from "path";
 import bodyParser from "body-parser";
-<<<<<<< HEAD
-=======
-import cors from "cors";
-import { fileURLToPath } from 'url';
->>>>>>> 63ff24cd5f00509aff64d456e4c2861151748679
 
 const app = express();
 const PORT = 5000;
@@ -22,26 +17,10 @@ app.use((req, res, next) => {
   next();
 });
 
-<<<<<<< HEAD
 // File paths
 const userFilePath = path.normalize(path.join("users.json"));
 const roleFilePath = path.normalize(path.join("roles.json"));
 const permissionFilePath = path.normalize(path.join("permission.json"));
-=======
-// Resolve the current directory in ES Module scope
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// Temporary directory for storing JSON files
-const tmpDir = path.join(__dirname, 'data');
-if (!fs.existsSync(tmpDir)) {
-  fs.mkdirSync(tmpDir);
-}
-
-const userFilePath = path.join(tmpDir, "users.json");
-const roleFilePath = path.join(tmpDir, "roles.json");
-const permissionFilePath = path.join(tmpDir, "permissions.json");
->>>>>>> 63ff24cd5f00509aff64d456e4c2861151748679
 
 const readFile = (filePath) => {
   try {
@@ -63,19 +42,6 @@ const writeFile = (filePath, data) => {
   }
 };
 
-<<<<<<< HEAD
-=======
-// Initialize files if they don't exist
-const initializeFiles = () => {
-  [userFilePath, roleFilePath, permissionFilePath].forEach((filePath) => {
-    if (!fs.existsSync(filePath)) {
-      writeFile(filePath, []);
-    }
-  });
-};
-initializeFiles();
-
->>>>>>> 63ff24cd5f00509aff64d456e4c2861151748679
 //=================================== User Management APIs =====================================
 app.get("/users", (req, res) => {
   const users = readFile(userFilePath);
